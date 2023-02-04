@@ -52,4 +52,18 @@ public class VineLaunch : MonoBehaviour
             GetComponent<Aim>().enabled = true;
         }
     }
+
+    // private void OnTriggerEnter(Collider other)
+    // { 
+    //     Vector3 newpos = Player.position;
+    //     float distance = Vector3.Distance(transform.position, newpos);
+    //     float t = 0;
+    //     t = 0;
+    //     while (t < 3)
+    //     {
+    //         transform.position = Vector3.Lerp(transform.position, Base.position, t);
+    //         t = t + (Time.deltaTime / distance) * Speed;
+    //    
+    //     }
+    // }
 }
