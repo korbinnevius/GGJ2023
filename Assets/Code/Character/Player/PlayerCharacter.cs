@@ -8,6 +8,8 @@ using UnityEngine.InputSystem;
 
 public class PlayerCharacter : Character
 {
+    private Vector3 dashDirection;
+    
     [SerializeField] private PlayerController playerController;
     public PlayerController PlayerController { get => playerController; set => playerController = value; }
 
