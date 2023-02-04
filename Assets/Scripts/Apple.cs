@@ -4,15 +4,28 @@ using UnityEngine;
 
 public class Apple : MonoBehaviour
 {
-    // Start is called before the first frame update
-    void Start()
+    public 
+    public bool CanSpawn;
+    public float MaxRange;
+    private void Start()
     {
+        StartCoroutine(ShootRoutine());
+    }
+
+    private IEnumerator ShootRoutine()
+    {
+        while (CanSpawn)
+        {
+            yield return new WaitForSeconds(Random.Range(0.1f, MaxRange));
+            yield return StartCoroutine(SpawnApples());
+        }
+    }
+
+    public IEnumerator SpawnApples()
+    {
+        
+        
         
     }
 
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
 }
