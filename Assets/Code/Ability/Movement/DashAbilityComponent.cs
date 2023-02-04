@@ -72,6 +72,7 @@ public class DashAbilityComponent : AbilityComponent
     public override void PullTrigger()
     {
         isTriggerHeld = true;
+        Debug.Log("dash");
         Fire();
     }
 
