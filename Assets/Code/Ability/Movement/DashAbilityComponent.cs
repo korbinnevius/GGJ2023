@@ -62,6 +62,7 @@ public class DashAbilityComponent : AbilityComponent
             PlayerCharacter playerCharacter = (PlayerCharacter)abilityController.Owner;
             if (playerCharacter)
             {
+                
                 /*PlayerMovement playerMovement = (PlayerMovement)playerCharacter.MovementComp;
                 if(playerMovement)
                     playerMovement.StartDash();*/
@@ -72,7 +73,6 @@ public class DashAbilityComponent : AbilityComponent
     public override void PullTrigger()
     {
         isTriggerHeld = true;
-        Debug.Log("dash");
         Fire();
     }
 
