@@ -93,6 +93,8 @@ public class PlayerController : MonoBehaviour
             inputActions.Character.Interaction.performed -= InteractOnPerformed;
             inputActions.Character.Interaction.canceled -= InteractOnCanceled;
             inputActions.Character.Disable();
+            
+            inputActions.Character.Dash.performed -= DashOnPerformed;
 
         }
         
@@ -170,7 +172,7 @@ public class PlayerController : MonoBehaviour
 
     private void DashOnPerformed(InputAction.CallbackContext context)
     {
-        playerCharacter.DashAbilityController.PullTrigger();
+        //playerCharacter.DashAbilityController.PullTrigger();
     }
     
     #endregion
