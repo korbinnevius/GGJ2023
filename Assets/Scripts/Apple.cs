@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class Apple : MonoBehaviour
 {
-    public 
+    
     public bool CanSpawn;
     public float MaxRange;
     private void Start()
