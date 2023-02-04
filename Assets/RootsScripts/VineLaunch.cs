@@ -15,7 +15,6 @@ public class VineLaunch : MonoBehaviour
 
     private void Start()
     {
-        
         StartCoroutine(ShootRoutine());
     }
 
@@ -42,6 +41,7 @@ public class VineLaunch : MonoBehaviour
                 t = t + (Time.deltaTime / distance) * Speed;
                 yield return null;
             }
+            
             t = 0;
             while (t < 3)
             {
@@ -53,17 +53,17 @@ public class VineLaunch : MonoBehaviour
         }
     }
 
-    // private void OnTriggerEnter(Collider other)
-    // { 
-    //     Vector3 newpos = Player.position;
-    //     float distance = Vector3.Distance(transform.position, newpos);
-    //     float t = 0;
-    //     t = 0;
-    //     while (t < 3)
-    //     {
-    //         transform.position = Vector3.Lerp(transform.position, Base.position, t);
-    //         t = t + (Time.deltaTime / distance) * Speed;
-    //    
-    //     }
-    // }
+    private void OnTriggerEnter(Collider other)
+    { 
+        Vector3 newpos = Player.position;
+        float distance = Vector3.Distance(transform.position, newpos);
+        float t = 0;
+        t = 0;
+        while (t < 3)
+        {
+            transform.position = Vector3.Lerp(transform.position, Base.position, t);
+            t = t + (Time.deltaTime / distance) * Speed;
+       
+        }
+    }
 }
