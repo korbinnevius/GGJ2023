@@ -342,7 +342,7 @@ MonoBehaviour:
   Player: {fileID: 0}
   Base: {fileID: 0}
   Speed: 50
-  MaxRange: 2
+  MaxRange: 5
   CanShoot: 1
 --- !u!114 &5538170911326901442
 MonoBehaviour:
