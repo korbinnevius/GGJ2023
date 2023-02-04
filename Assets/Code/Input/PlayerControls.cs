@@ -15,14 +15,12 @@ using System.Collections.Generic;
 using UnityEngine.InputSystem;
 using UnityEngine.InputSystem.Utilities;
 
-namespace Merc
+public partial class @PlayerControls : IInputActionCollection2, IDisposable
 {
-    public partial class @PlayerControls : IInputActionCollection2, IDisposable
+    public InputActionAsset asset { get; }
+    public @PlayerControls()
     {
-        public InputActionAsset asset { get; }
-        public @PlayerControls()
-        {
-            asset = InputActionAsset.FromJson(@"{
+        asset = InputActionAsset.FromJson(@"{
     ""name"": ""PlayerControls"",
     ""maps"": [
         {
@@ -963,328 +961,327 @@ namespace Merc
         }
     ]
 }");
-            // UI
-            m_UI = asset.FindActionMap("UI", throwIfNotFound: true);
-            m_UI_Navigate = m_UI.FindAction("Navigate", throwIfNotFound: true);
-            m_UI_Submit = m_UI.FindAction("Submit", throwIfNotFound: true);
-            m_UI_Cancel = m_UI.FindAction("Cancel", throwIfNotFound: true);
-            m_UI_Point = m_UI.FindAction("Point", throwIfNotFound: true);
-            m_UI_Click = m_UI.FindAction("Click", throwIfNotFound: true);
-            m_UI_ScrollWheel = m_UI.FindAction("ScrollWheel", throwIfNotFound: true);
-            m_UI_MiddleClick = m_UI.FindAction("MiddleClick", throwIfNotFound: true);
-            m_UI_RightClick = m_UI.FindAction("RightClick", throwIfNotFound: true);
-            m_UI_TrackedDevicePosition = m_UI.FindAction("TrackedDevicePosition", throwIfNotFound: true);
-            m_UI_TrackedDeviceOrientation = m_UI.FindAction("TrackedDeviceOrientation", throwIfNotFound: true);
-            m_UI_Pause = m_UI.FindAction("Pause", throwIfNotFound: true);
-            // Character
-            m_Character = asset.FindActionMap("Character", throwIfNotFound: true);
-            m_Character_Left_PullTrigger = m_Character.FindAction("Left_PullTrigger", throwIfNotFound: true);
-            m_Character_Right_PullTrigger = m_Character.FindAction("Right_PullTrigger", throwIfNotFound: true);
-            m_Character_Move = m_Character.FindAction("Move", throwIfNotFound: true);
-            m_Character_Look = m_Character.FindAction("Look", throwIfNotFound: true);
-            m_Character_Left_Reload = m_Character.FindAction("Left_Reload", throwIfNotFound: true);
-            m_Character_Right_Reload = m_Character.FindAction("Right_Reload", throwIfNotFound: true);
-            m_Character_Interaction = m_Character.FindAction("Interaction", throwIfNotFound: true);
-            m_Character_Dash = m_Character.FindAction("Dash", throwIfNotFound: true);
-        }
-
-        public void Dispose()
-        {
-            UnityEngine.Object.Destroy(asset);
-        }
-
-        public InputBinding? bindingMask
-        {
-            get => asset.bindingMask;
-            set => asset.bindingMask = value;
-        }
-
-        public ReadOnlyArray<InputDevice>? devices
-        {
-            get => asset.devices;
-            set => asset.devices = value;
-        }
-
-        public ReadOnlyArray<InputControlScheme> controlSchemes => asset.controlSchemes;
-
-        public bool Contains(InputAction action)
-        {
-            return asset.Contains(action);
-        }
-
-        public IEnumerator<InputAction> GetEnumerator()
-        {
-            return asset.GetEnumerator();
-        }
-
-        IEnumerator IEnumerable.GetEnumerator()
-        {
-            return GetEnumerator();
-        }
-
-        public void Enable()
-        {
-            asset.Enable();
-        }
-
-        public void Disable()
-        {
-            asset.Disable();
-        }
-        public IEnumerable<InputBinding> bindings => asset.bindings;
-
-        public InputAction FindAction(string actionNameOrId, bool throwIfNotFound = false)
-        {
-            return asset.FindAction(actionNameOrId, throwIfNotFound);
-        }
-        public int FindBinding(InputBinding bindingMask, out InputAction action)
-        {
-            return asset.FindBinding(bindingMask, out action);
-        }
-
         // UI
-        private readonly InputActionMap m_UI;
-        private IUIActions m_UIActionsCallbackInterface;
-        private readonly InputAction m_UI_Navigate;
-        private readonly InputAction m_UI_Submit;
-        private readonly InputAction m_UI_Cancel;
-        private readonly InputAction m_UI_Point;
-        private readonly InputAction m_UI_Click;
-        private readonly InputAction m_UI_ScrollWheel;
-        private readonly InputAction m_UI_MiddleClick;
-        private readonly InputAction m_UI_RightClick;
-        private readonly InputAction m_UI_TrackedDevicePosition;
-        private readonly InputAction m_UI_TrackedDeviceOrientation;
-        private readonly InputAction m_UI_Pause;
-        public struct UIActions
-        {
-            private @PlayerControls m_Wrapper;
-            public UIActions(@PlayerControls wrapper) { m_Wrapper = wrapper; }
-            public InputAction @Navigate => m_Wrapper.m_UI_Navigate;
-            public InputAction @Submit => m_Wrapper.m_UI_Submit;
-            public InputAction @Cancel => m_Wrapper.m_UI_Cancel;
-            public InputAction @Point => m_Wrapper.m_UI_Point;
-            public InputAction @Click => m_Wrapper.m_UI_Click;
-            public InputAction @ScrollWheel => m_Wrapper.m_UI_ScrollWheel;
-            public InputAction @MiddleClick => m_Wrapper.m_UI_MiddleClick;
-            public InputAction @RightClick => m_Wrapper.m_UI_RightClick;
-            public InputAction @TrackedDevicePosition => m_Wrapper.m_UI_TrackedDevicePosition;
-            public InputAction @TrackedDeviceOrientation => m_Wrapper.m_UI_TrackedDeviceOrientation;
-            public InputAction @Pause => m_Wrapper.m_UI_Pause;
-            public InputActionMap Get() { return m_Wrapper.m_UI; }
-            public void Enable() { Get().Enable(); }
-            public void Disable() { Get().Disable(); }
-            public bool enabled => Get().enabled;
-            public static implicit operator InputActionMap(UIActions set) { return set.Get(); }
-            public void SetCallbacks(IUIActions instance)
-            {
-                if (m_Wrapper.m_UIActionsCallbackInterface != null)
-                {
-                    @Navigate.started -= m_Wrapper.m_UIActionsCallbackInterface.OnNavigate;
-                    @Navigate.performed -= m_Wrapper.m_UIActionsCallbackInterface.OnNavigate;
-                    @Navigate.canceled -= m_Wrapper.m_UIActionsCallbackInterface.OnNavigate;
-                    @Submit.started -= m_Wrapper.m_UIActionsCallbackInterface.OnSubmit;
-                    @Submit.performed -= m_Wrapper.m_UIActionsCallbackInterface.OnSubmit;
-                    @Submit.canceled -= m_Wrapper.m_UIActionsCallbackInterface.OnSubmit;
-                    @Cancel.started -= m_Wrapper.m_UIActionsCallbackInterface.OnCancel;
-                    @Cancel.performed -= m_Wrapper.m_UIActionsCallbackInterface.OnCancel;
-                    @Cancel.canceled -= m_Wrapper.m_UIActionsCallbackInterface.OnCancel;
-                    @Point.started -= m_Wrapper.m_UIActionsCallbackInterface.OnPoint;
-                    @Point.performed -= m_Wrapper.m_UIActionsCallbackInterface.OnPoint;
-                    @Point.canceled -= m_Wrapper.m_UIActionsCallbackInterface.OnPoint;
-                    @Click.started -= m_Wrapper.m_UIActionsCallbackInterface.OnClick;
-                    @Click.performed -= m_Wrapper.m_UIActionsCallbackInterface.OnClick;
-                    @Click.canceled -= m_Wrapper.m_UIActionsCallbackInterface.OnClick;
-                    @ScrollWheel.started -= m_Wrapper.m_UIActionsCallbackInterface.OnScrollWheel;
-                    @ScrollWheel.performed -= m_Wrapper.m_UIActionsCallbackInterface.OnScrollWheel;
-                    @ScrollWheel.canceled -= m_Wrapper.m_UIActionsCallbackInterface.OnScrollWheel;
-                    @MiddleClick.started -= m_Wrapper.m_UIActionsCallbackInterface.OnMiddleClick;
-                    @MiddleClick.performed -= m_Wrapper.m_UIActionsCallbackInterface.OnMiddleClick;
-                    @MiddleClick.canceled -= m_Wrapper.m_UIActionsCallbackInterface.OnMiddleClick;
-                    @RightClick.started -= m_Wrapper.m_UIActionsCallbackInterface.OnRightClick;
-                    @RightClick.performed -= m_Wrapper.m_UIActionsCallbackInterface.OnRightClick;
-                    @RightClick.canceled -= m_Wrapper.m_UIActionsCallbackInterface.OnRightClick;
-                    @TrackedDevicePosition.started -= m_Wrapper.m_UIActionsCallbackInterface.OnTrackedDevicePosition;
-                    @TrackedDevicePosition.performed -= m_Wrapper.m_UIActionsCallbackInterface.OnTrackedDevicePosition;
-                    @TrackedDevicePosition.canceled -= m_Wrapper.m_UIActionsCallbackInterface.OnTrackedDevicePosition;
-                    @TrackedDeviceOrientation.started -= m_Wrapper.m_UIActionsCallbackInterface.OnTrackedDeviceOrientation;
-                    @TrackedDeviceOrientation.performed -= m_Wrapper.m_UIActionsCallbackInterface.OnTrackedDeviceOrientation;
-                    @TrackedDeviceOrientation.canceled -= m_Wrapper.m_UIActionsCallbackInterface.OnTrackedDeviceOrientation;
-                    @Pause.started -= m_Wrapper.m_UIActionsCallbackInterface.OnPause;
-                    @Pause.performed -= m_Wrapper.m_UIActionsCallbackInterface.OnPause;
-                    @Pause.canceled -= m_Wrapper.m_UIActionsCallbackInterface.OnPause;
-                }
-                m_Wrapper.m_UIActionsCallbackInterface = instance;
-                if (instance != null)
-                {
-                    @Navigate.started += instance.OnNavigate;
-                    @Navigate.performed += instance.OnNavigate;
-                    @Navigate.canceled += instance.OnNavigate;
-                    @Submit.started += instance.OnSubmit;
-                    @Submit.performed += instance.OnSubmit;
-                    @Submit.canceled += instance.OnSubmit;
-                    @Cancel.started += instance.OnCancel;
-                    @Cancel.performed += instance.OnCancel;
-                    @Cancel.canceled += instance.OnCancel;
-                    @Point.started += instance.OnPoint;
-                    @Point.performed += instance.OnPoint;
-                    @Point.canceled += instance.OnPoint;
-                    @Click.started += instance.OnClick;
-                    @Click.performed += instance.OnClick;
-                    @Click.canceled += instance.OnClick;
-                    @ScrollWheel.started += instance.OnScrollWheel;
-                    @ScrollWheel.performed += instance.OnScrollWheel;
-                    @ScrollWheel.canceled += instance.OnScrollWheel;
-                    @MiddleClick.started += instance.OnMiddleClick;
-                    @MiddleClick.performed += instance.OnMiddleClick;
-                    @MiddleClick.canceled += instance.OnMiddleClick;
-                    @RightClick.started += instance.OnRightClick;
-                    @RightClick.performed += instance.OnRightClick;
-                    @RightClick.canceled += instance.OnRightClick;
-                    @TrackedDevicePosition.started += instance.OnTrackedDevicePosition;
-                    @TrackedDevicePosition.performed += instance.OnTrackedDevicePosition;
-                    @TrackedDevicePosition.canceled += instance.OnTrackedDevicePosition;
-                    @TrackedDeviceOrientation.started += instance.OnTrackedDeviceOrientation;
-                    @TrackedDeviceOrientation.performed += instance.OnTrackedDeviceOrientation;
-                    @TrackedDeviceOrientation.canceled += instance.OnTrackedDeviceOrientation;
-                    @Pause.started += instance.OnPause;
-                    @Pause.performed += instance.OnPause;
-                    @Pause.canceled += instance.OnPause;
-                }
-            }
-        }
-        public UIActions @UI => new UIActions(this);
-
+        m_UI = asset.FindActionMap("UI", throwIfNotFound: true);
+        m_UI_Navigate = m_UI.FindAction("Navigate", throwIfNotFound: true);
+        m_UI_Submit = m_UI.FindAction("Submit", throwIfNotFound: true);
+        m_UI_Cancel = m_UI.FindAction("Cancel", throwIfNotFound: true);
+        m_UI_Point = m_UI.FindAction("Point", throwIfNotFound: true);
+        m_UI_Click = m_UI.FindAction("Click", throwIfNotFound: true);
+        m_UI_ScrollWheel = m_UI.FindAction("ScrollWheel", throwIfNotFound: true);
+        m_UI_MiddleClick = m_UI.FindAction("MiddleClick", throwIfNotFound: true);
+        m_UI_RightClick = m_UI.FindAction("RightClick", throwIfNotFound: true);
+        m_UI_TrackedDevicePosition = m_UI.FindAction("TrackedDevicePosition", throwIfNotFound: true);
+        m_UI_TrackedDeviceOrientation = m_UI.FindAction("TrackedDeviceOrientation", throwIfNotFound: true);
+        m_UI_Pause = m_UI.FindAction("Pause", throwIfNotFound: true);
         // Character
-        private readonly InputActionMap m_Character;
-        private ICharacterActions m_CharacterActionsCallbackInterface;
-        private readonly InputAction m_Character_Left_PullTrigger;
-        private readonly InputAction m_Character_Right_PullTrigger;
-        private readonly InputAction m_Character_Move;
-        private readonly InputAction m_Character_Look;
-        private readonly InputAction m_Character_Left_Reload;
-        private readonly InputAction m_Character_Right_Reload;
-        private readonly InputAction m_Character_Interaction;
-        private readonly InputAction m_Character_Dash;
-        public struct CharacterActions
+        m_Character = asset.FindActionMap("Character", throwIfNotFound: true);
+        m_Character_Left_PullTrigger = m_Character.FindAction("Left_PullTrigger", throwIfNotFound: true);
+        m_Character_Right_PullTrigger = m_Character.FindAction("Right_PullTrigger", throwIfNotFound: true);
+        m_Character_Move = m_Character.FindAction("Move", throwIfNotFound: true);
+        m_Character_Look = m_Character.FindAction("Look", throwIfNotFound: true);
+        m_Character_Left_Reload = m_Character.FindAction("Left_Reload", throwIfNotFound: true);
+        m_Character_Right_Reload = m_Character.FindAction("Right_Reload", throwIfNotFound: true);
+        m_Character_Interaction = m_Character.FindAction("Interaction", throwIfNotFound: true);
+        m_Character_Dash = m_Character.FindAction("Dash", throwIfNotFound: true);
+    }
+
+    public void Dispose()
+    {
+        UnityEngine.Object.Destroy(asset);
+    }
+
+    public InputBinding? bindingMask
+    {
+        get => asset.bindingMask;
+        set => asset.bindingMask = value;
+    }
+
+    public ReadOnlyArray<InputDevice>? devices
+    {
+        get => asset.devices;
+        set => asset.devices = value;
+    }
+
+    public ReadOnlyArray<InputControlScheme> controlSchemes => asset.controlSchemes;
+
+    public bool Contains(InputAction action)
+    {
+        return asset.Contains(action);
+    }
+
+    public IEnumerator<InputAction> GetEnumerator()
+    {
+        return asset.GetEnumerator();
+    }
+
+    IEnumerator IEnumerable.GetEnumerator()
+    {
+        return GetEnumerator();
+    }
+
+    public void Enable()
+    {
+        asset.Enable();
+    }
+
+    public void Disable()
+    {
+        asset.Disable();
+    }
+    public IEnumerable<InputBinding> bindings => asset.bindings;
+
+    public InputAction FindAction(string actionNameOrId, bool throwIfNotFound = false)
+    {
+        return asset.FindAction(actionNameOrId, throwIfNotFound);
+    }
+    public int FindBinding(InputBinding bindingMask, out InputAction action)
+    {
+        return asset.FindBinding(bindingMask, out action);
+    }
+
+    // UI
+    private readonly InputActionMap m_UI;
+    private IUIActions m_UIActionsCallbackInterface;
+    private readonly InputAction m_UI_Navigate;
+    private readonly InputAction m_UI_Submit;
+    private readonly InputAction m_UI_Cancel;
+    private readonly InputAction m_UI_Point;
+    private readonly InputAction m_UI_Click;
+    private readonly InputAction m_UI_ScrollWheel;
+    private readonly InputAction m_UI_MiddleClick;
+    private readonly InputAction m_UI_RightClick;
+    private readonly InputAction m_UI_TrackedDevicePosition;
+    private readonly InputAction m_UI_TrackedDeviceOrientation;
+    private readonly InputAction m_UI_Pause;
+    public struct UIActions
+    {
+        private @PlayerControls m_Wrapper;
+        public UIActions(@PlayerControls wrapper) { m_Wrapper = wrapper; }
+        public InputAction @Navigate => m_Wrapper.m_UI_Navigate;
+        public InputAction @Submit => m_Wrapper.m_UI_Submit;
+        public InputAction @Cancel => m_Wrapper.m_UI_Cancel;
+        public InputAction @Point => m_Wrapper.m_UI_Point;
+        public InputAction @Click => m_Wrapper.m_UI_Click;
+        public InputAction @ScrollWheel => m_Wrapper.m_UI_ScrollWheel;
+        public InputAction @MiddleClick => m_Wrapper.m_UI_MiddleClick;
+        public InputAction @RightClick => m_Wrapper.m_UI_RightClick;
+        public InputAction @TrackedDevicePosition => m_Wrapper.m_UI_TrackedDevicePosition;
+        public InputAction @TrackedDeviceOrientation => m_Wrapper.m_UI_TrackedDeviceOrientation;
+        public InputAction @Pause => m_Wrapper.m_UI_Pause;
+        public InputActionMap Get() { return m_Wrapper.m_UI; }
+        public void Enable() { Get().Enable(); }
+        public void Disable() { Get().Disable(); }
+        public bool enabled => Get().enabled;
+        public static implicit operator InputActionMap(UIActions set) { return set.Get(); }
+        public void SetCallbacks(IUIActions instance)
         {
-            private @PlayerControls m_Wrapper;
-            public CharacterActions(@PlayerControls wrapper) { m_Wrapper = wrapper; }
-            public InputAction @Left_PullTrigger => m_Wrapper.m_Character_Left_PullTrigger;
-            public InputAction @Right_PullTrigger => m_Wrapper.m_Character_Right_PullTrigger;
-            public InputAction @Move => m_Wrapper.m_Character_Move;
-            public InputAction @Look => m_Wrapper.m_Character_Look;
-            public InputAction @Left_Reload => m_Wrapper.m_Character_Left_Reload;
-            public InputAction @Right_Reload => m_Wrapper.m_Character_Right_Reload;
-            public InputAction @Interaction => m_Wrapper.m_Character_Interaction;
-            public InputAction @Dash => m_Wrapper.m_Character_Dash;
-            public InputActionMap Get() { return m_Wrapper.m_Character; }
-            public void Enable() { Get().Enable(); }
-            public void Disable() { Get().Disable(); }
-            public bool enabled => Get().enabled;
-            public static implicit operator InputActionMap(CharacterActions set) { return set.Get(); }
-            public void SetCallbacks(ICharacterActions instance)
+            if (m_Wrapper.m_UIActionsCallbackInterface != null)
             {
-                if (m_Wrapper.m_CharacterActionsCallbackInterface != null)
-                {
-                    @Left_PullTrigger.started -= m_Wrapper.m_CharacterActionsCallbackInterface.OnLeft_PullTrigger;
-                    @Left_PullTrigger.performed -= m_Wrapper.m_CharacterActionsCallbackInterface.OnLeft_PullTrigger;
-                    @Left_PullTrigger.canceled -= m_Wrapper.m_CharacterActionsCallbackInterface.OnLeft_PullTrigger;
-                    @Right_PullTrigger.started -= m_Wrapper.m_CharacterActionsCallbackInterface.OnRight_PullTrigger;
-                    @Right_PullTrigger.performed -= m_Wrapper.m_CharacterActionsCallbackInterface.OnRight_PullTrigger;
-                    @Right_PullTrigger.canceled -= m_Wrapper.m_CharacterActionsCallbackInterface.OnRight_PullTrigger;
-                    @Move.started -= m_Wrapper.m_CharacterActionsCallbackInterface.OnMove;
-                    @Move.performed -= m_Wrapper.m_CharacterActionsCallbackInterface.OnMove;
-                    @Move.canceled -= m_Wrapper.m_CharacterActionsCallbackInterface.OnMove;
-                    @Look.started -= m_Wrapper.m_CharacterActionsCallbackInterface.OnLook;
-                    @Look.performed -= m_Wrapper.m_CharacterActionsCallbackInterface.OnLook;
-                    @Look.canceled -= m_Wrapper.m_CharacterActionsCallbackInterface.OnLook;
-                    @Left_Reload.started -= m_Wrapper.m_CharacterActionsCallbackInterface.OnLeft_Reload;
-                    @Left_Reload.performed -= m_Wrapper.m_CharacterActionsCallbackInterface.OnLeft_Reload;
-                    @Left_Reload.canceled -= m_Wrapper.m_CharacterActionsCallbackInterface.OnLeft_Reload;
-                    @Right_Reload.started -= m_Wrapper.m_CharacterActionsCallbackInterface.OnRight_Reload;
-                    @Right_Reload.performed -= m_Wrapper.m_CharacterActionsCallbackInterface.OnRight_Reload;
-                    @Right_Reload.canceled -= m_Wrapper.m_CharacterActionsCallbackInterface.OnRight_Reload;
-                    @Interaction.started -= m_Wrapper.m_CharacterActionsCallbackInterface.OnInteraction;
-                    @Interaction.performed -= m_Wrapper.m_CharacterActionsCallbackInterface.OnInteraction;
-                    @Interaction.canceled -= m_Wrapper.m_CharacterActionsCallbackInterface.OnInteraction;
-                    @Dash.started -= m_Wrapper.m_CharacterActionsCallbackInterface.OnDash;
-                    @Dash.performed -= m_Wrapper.m_CharacterActionsCallbackInterface.OnDash;
-                    @Dash.canceled -= m_Wrapper.m_CharacterActionsCallbackInterface.OnDash;
-                }
-                m_Wrapper.m_CharacterActionsCallbackInterface = instance;
-                if (instance != null)
-                {
-                    @Left_PullTrigger.started += instance.OnLeft_PullTrigger;
-                    @Left_PullTrigger.performed += instance.OnLeft_PullTrigger;
-                    @Left_PullTrigger.canceled += instance.OnLeft_PullTrigger;
-                    @Right_PullTrigger.started += instance.OnRight_PullTrigger;
-                    @Right_PullTrigger.performed += instance.OnRight_PullTrigger;
-                    @Right_PullTrigger.canceled += instance.OnRight_PullTrigger;
-                    @Move.started += instance.OnMove;
-                    @Move.performed += instance.OnMove;
-                    @Move.canceled += instance.OnMove;
-                    @Look.started += instance.OnLook;
-                    @Look.performed += instance.OnLook;
-                    @Look.canceled += instance.OnLook;
-                    @Left_Reload.started += instance.OnLeft_Reload;
-                    @Left_Reload.performed += instance.OnLeft_Reload;
-                    @Left_Reload.canceled += instance.OnLeft_Reload;
-                    @Right_Reload.started += instance.OnRight_Reload;
-                    @Right_Reload.performed += instance.OnRight_Reload;
-                    @Right_Reload.canceled += instance.OnRight_Reload;
-                    @Interaction.started += instance.OnInteraction;
-                    @Interaction.performed += instance.OnInteraction;
-                    @Interaction.canceled += instance.OnInteraction;
-                    @Dash.started += instance.OnDash;
-                    @Dash.performed += instance.OnDash;
-                    @Dash.canceled += instance.OnDash;
-                }
+                @Navigate.started -= m_Wrapper.m_UIActionsCallbackInterface.OnNavigate;
+                @Navigate.performed -= m_Wrapper.m_UIActionsCallbackInterface.OnNavigate;
+                @Navigate.canceled -= m_Wrapper.m_UIActionsCallbackInterface.OnNavigate;
+                @Submit.started -= m_Wrapper.m_UIActionsCallbackInterface.OnSubmit;
+                @Submit.performed -= m_Wrapper.m_UIActionsCallbackInterface.OnSubmit;
+                @Submit.canceled -= m_Wrapper.m_UIActionsCallbackInterface.OnSubmit;
+                @Cancel.started -= m_Wrapper.m_UIActionsCallbackInterface.OnCancel;
+                @Cancel.performed -= m_Wrapper.m_UIActionsCallbackInterface.OnCancel;
+                @Cancel.canceled -= m_Wrapper.m_UIActionsCallbackInterface.OnCancel;
+                @Point.started -= m_Wrapper.m_UIActionsCallbackInterface.OnPoint;
+                @Point.performed -= m_Wrapper.m_UIActionsCallbackInterface.OnPoint;
+                @Point.canceled -= m_Wrapper.m_UIActionsCallbackInterface.OnPoint;
+                @Click.started -= m_Wrapper.m_UIActionsCallbackInterface.OnClick;
+                @Click.performed -= m_Wrapper.m_UIActionsCallbackInterface.OnClick;
+                @Click.canceled -= m_Wrapper.m_UIActionsCallbackInterface.OnClick;
+                @ScrollWheel.started -= m_Wrapper.m_UIActionsCallbackInterface.OnScrollWheel;
+                @ScrollWheel.performed -= m_Wrapper.m_UIActionsCallbackInterface.OnScrollWheel;
+                @ScrollWheel.canceled -= m_Wrapper.m_UIActionsCallbackInterface.OnScrollWheel;
+                @MiddleClick.started -= m_Wrapper.m_UIActionsCallbackInterface.OnMiddleClick;
+                @MiddleClick.performed -= m_Wrapper.m_UIActionsCallbackInterface.OnMiddleClick;
+                @MiddleClick.canceled -= m_Wrapper.m_UIActionsCallbackInterface.OnMiddleClick;
+                @RightClick.started -= m_Wrapper.m_UIActionsCallbackInterface.OnRightClick;
+                @RightClick.performed -= m_Wrapper.m_UIActionsCallbackInterface.OnRightClick;
+                @RightClick.canceled -= m_Wrapper.m_UIActionsCallbackInterface.OnRightClick;
+                @TrackedDevicePosition.started -= m_Wrapper.m_UIActionsCallbackInterface.OnTrackedDevicePosition;
+                @TrackedDevicePosition.performed -= m_Wrapper.m_UIActionsCallbackInterface.OnTrackedDevicePosition;
+                @TrackedDevicePosition.canceled -= m_Wrapper.m_UIActionsCallbackInterface.OnTrackedDevicePosition;
+                @TrackedDeviceOrientation.started -= m_Wrapper.m_UIActionsCallbackInterface.OnTrackedDeviceOrientation;
+                @TrackedDeviceOrientation.performed -= m_Wrapper.m_UIActionsCallbackInterface.OnTrackedDeviceOrientation;
+                @TrackedDeviceOrientation.canceled -= m_Wrapper.m_UIActionsCallbackInterface.OnTrackedDeviceOrientation;
+                @Pause.started -= m_Wrapper.m_UIActionsCallbackInterface.OnPause;
+                @Pause.performed -= m_Wrapper.m_UIActionsCallbackInterface.OnPause;
+                @Pause.canceled -= m_Wrapper.m_UIActionsCallbackInterface.OnPause;
+            }
+            m_Wrapper.m_UIActionsCallbackInterface = instance;
+            if (instance != null)
+            {
+                @Navigate.started += instance.OnNavigate;
+                @Navigate.performed += instance.OnNavigate;
+                @Navigate.canceled += instance.OnNavigate;
+                @Submit.started += instance.OnSubmit;
+                @Submit.performed += instance.OnSubmit;
+                @Submit.canceled += instance.OnSubmit;
+                @Cancel.started += instance.OnCancel;
+                @Cancel.performed += instance.OnCancel;
+                @Cancel.canceled += instance.OnCancel;
+                @Point.started += instance.OnPoint;
+                @Point.performed += instance.OnPoint;
+                @Point.canceled += instance.OnPoint;
+                @Click.started += instance.OnClick;
+                @Click.performed += instance.OnClick;
+                @Click.canceled += instance.OnClick;
+                @ScrollWheel.started += instance.OnScrollWheel;
+                @ScrollWheel.performed += instance.OnScrollWheel;
+                @ScrollWheel.canceled += instance.OnScrollWheel;
+                @MiddleClick.started += instance.OnMiddleClick;
+                @MiddleClick.performed += instance.OnMiddleClick;
+                @MiddleClick.canceled += instance.OnMiddleClick;
+                @RightClick.started += instance.OnRightClick;
+                @RightClick.performed += instance.OnRightClick;
+                @RightClick.canceled += instance.OnRightClick;
+                @TrackedDevicePosition.started += instance.OnTrackedDevicePosition;
+                @TrackedDevicePosition.performed += instance.OnTrackedDevicePosition;
+                @TrackedDevicePosition.canceled += instance.OnTrackedDevicePosition;
+                @TrackedDeviceOrientation.started += instance.OnTrackedDeviceOrientation;
+                @TrackedDeviceOrientation.performed += instance.OnTrackedDeviceOrientation;
+                @TrackedDeviceOrientation.canceled += instance.OnTrackedDeviceOrientation;
+                @Pause.started += instance.OnPause;
+                @Pause.performed += instance.OnPause;
+                @Pause.canceled += instance.OnPause;
             }
         }
-        public CharacterActions @Character => new CharacterActions(this);
-        private int m_GamepadSchemeIndex = -1;
-        public InputControlScheme GamepadScheme
+    }
+    public UIActions @UI => new UIActions(this);
+
+    // Character
+    private readonly InputActionMap m_Character;
+    private ICharacterActions m_CharacterActionsCallbackInterface;
+    private readonly InputAction m_Character_Left_PullTrigger;
+    private readonly InputAction m_Character_Right_PullTrigger;
+    private readonly InputAction m_Character_Move;
+    private readonly InputAction m_Character_Look;
+    private readonly InputAction m_Character_Left_Reload;
+    private readonly InputAction m_Character_Right_Reload;
+    private readonly InputAction m_Character_Interaction;
+    private readonly InputAction m_Character_Dash;
+    public struct CharacterActions
+    {
+        private @PlayerControls m_Wrapper;
+        public CharacterActions(@PlayerControls wrapper) { m_Wrapper = wrapper; }
+        public InputAction @Left_PullTrigger => m_Wrapper.m_Character_Left_PullTrigger;
+        public InputAction @Right_PullTrigger => m_Wrapper.m_Character_Right_PullTrigger;
+        public InputAction @Move => m_Wrapper.m_Character_Move;
+        public InputAction @Look => m_Wrapper.m_Character_Look;
+        public InputAction @Left_Reload => m_Wrapper.m_Character_Left_Reload;
+        public InputAction @Right_Reload => m_Wrapper.m_Character_Right_Reload;
+        public InputAction @Interaction => m_Wrapper.m_Character_Interaction;
+        public InputAction @Dash => m_Wrapper.m_Character_Dash;
+        public InputActionMap Get() { return m_Wrapper.m_Character; }
+        public void Enable() { Get().Enable(); }
+        public void Disable() { Get().Disable(); }
+        public bool enabled => Get().enabled;
+        public static implicit operator InputActionMap(CharacterActions set) { return set.Get(); }
+        public void SetCallbacks(ICharacterActions instance)
         {
-            get
+            if (m_Wrapper.m_CharacterActionsCallbackInterface != null)
             {
-                if (m_GamepadSchemeIndex == -1) m_GamepadSchemeIndex = asset.FindControlSchemeIndex("Gamepad");
-                return asset.controlSchemes[m_GamepadSchemeIndex];
+                @Left_PullTrigger.started -= m_Wrapper.m_CharacterActionsCallbackInterface.OnLeft_PullTrigger;
+                @Left_PullTrigger.performed -= m_Wrapper.m_CharacterActionsCallbackInterface.OnLeft_PullTrigger;
+                @Left_PullTrigger.canceled -= m_Wrapper.m_CharacterActionsCallbackInterface.OnLeft_PullTrigger;
+                @Right_PullTrigger.started -= m_Wrapper.m_CharacterActionsCallbackInterface.OnRight_PullTrigger;
+                @Right_PullTrigger.performed -= m_Wrapper.m_CharacterActionsCallbackInterface.OnRight_PullTrigger;
+                @Right_PullTrigger.canceled -= m_Wrapper.m_CharacterActionsCallbackInterface.OnRight_PullTrigger;
+                @Move.started -= m_Wrapper.m_CharacterActionsCallbackInterface.OnMove;
+                @Move.performed -= m_Wrapper.m_CharacterActionsCallbackInterface.OnMove;
+                @Move.canceled -= m_Wrapper.m_CharacterActionsCallbackInterface.OnMove;
+                @Look.started -= m_Wrapper.m_CharacterActionsCallbackInterface.OnLook;
+                @Look.performed -= m_Wrapper.m_CharacterActionsCallbackInterface.OnLook;
+                @Look.canceled -= m_Wrapper.m_CharacterActionsCallbackInterface.OnLook;
+                @Left_Reload.started -= m_Wrapper.m_CharacterActionsCallbackInterface.OnLeft_Reload;
+                @Left_Reload.performed -= m_Wrapper.m_CharacterActionsCallbackInterface.OnLeft_Reload;
+                @Left_Reload.canceled -= m_Wrapper.m_CharacterActionsCallbackInterface.OnLeft_Reload;
+                @Right_Reload.started -= m_Wrapper.m_CharacterActionsCallbackInterface.OnRight_Reload;
+                @Right_Reload.performed -= m_Wrapper.m_CharacterActionsCallbackInterface.OnRight_Reload;
+                @Right_Reload.canceled -= m_Wrapper.m_CharacterActionsCallbackInterface.OnRight_Reload;
+                @Interaction.started -= m_Wrapper.m_CharacterActionsCallbackInterface.OnInteraction;
+                @Interaction.performed -= m_Wrapper.m_CharacterActionsCallbackInterface.OnInteraction;
+                @Interaction.canceled -= m_Wrapper.m_CharacterActionsCallbackInterface.OnInteraction;
+                @Dash.started -= m_Wrapper.m_CharacterActionsCallbackInterface.OnDash;
+                @Dash.performed -= m_Wrapper.m_CharacterActionsCallbackInterface.OnDash;
+                @Dash.canceled -= m_Wrapper.m_CharacterActionsCallbackInterface.OnDash;
+            }
+            m_Wrapper.m_CharacterActionsCallbackInterface = instance;
+            if (instance != null)
+            {
+                @Left_PullTrigger.started += instance.OnLeft_PullTrigger;
+                @Left_PullTrigger.performed += instance.OnLeft_PullTrigger;
+                @Left_PullTrigger.canceled += instance.OnLeft_PullTrigger;
+                @Right_PullTrigger.started += instance.OnRight_PullTrigger;
+                @Right_PullTrigger.performed += instance.OnRight_PullTrigger;
+                @Right_PullTrigger.canceled += instance.OnRight_PullTrigger;
+                @Move.started += instance.OnMove;
+                @Move.performed += instance.OnMove;
+                @Move.canceled += instance.OnMove;
+                @Look.started += instance.OnLook;
+                @Look.performed += instance.OnLook;
+                @Look.canceled += instance.OnLook;
+                @Left_Reload.started += instance.OnLeft_Reload;
+                @Left_Reload.performed += instance.OnLeft_Reload;
+                @Left_Reload.canceled += instance.OnLeft_Reload;
+                @Right_Reload.started += instance.OnRight_Reload;
+                @Right_Reload.performed += instance.OnRight_Reload;
+                @Right_Reload.canceled += instance.OnRight_Reload;
+                @Interaction.started += instance.OnInteraction;
+                @Interaction.performed += instance.OnInteraction;
+                @Interaction.canceled += instance.OnInteraction;
+                @Dash.started += instance.OnDash;
+                @Dash.performed += instance.OnDash;
+                @Dash.canceled += instance.OnDash;
             }
         }
-        private int m_KeyboardMouseSchemeIndex = -1;
-        public InputControlScheme KeyboardMouseScheme
+    }
+    public CharacterActions @Character => new CharacterActions(this);
+    private int m_GamepadSchemeIndex = -1;
+    public InputControlScheme GamepadScheme
+    {
+        get
         {
-            get
-            {
-                if (m_KeyboardMouseSchemeIndex == -1) m_KeyboardMouseSchemeIndex = asset.FindControlSchemeIndex("KeyboardMouse");
-                return asset.controlSchemes[m_KeyboardMouseSchemeIndex];
-            }
+            if (m_GamepadSchemeIndex == -1) m_GamepadSchemeIndex = asset.FindControlSchemeIndex("Gamepad");
+            return asset.controlSchemes[m_GamepadSchemeIndex];
         }
-        public interface IUIActions
+    }
+    private int m_KeyboardMouseSchemeIndex = -1;
+    public InputControlScheme KeyboardMouseScheme
+    {
+        get
         {
-            void OnNavigate(InputAction.CallbackContext context);
-            void OnSubmit(InputAction.CallbackContext context);
-            void OnCancel(InputAction.CallbackContext context);
-            void OnPoint(InputAction.CallbackContext context);
-            void OnClick(InputAction.CallbackContext context);
-            void OnScrollWheel(InputAction.CallbackContext context);
-            void OnMiddleClick(InputAction.CallbackContext context);
-            void OnRightClick(InputAction.CallbackContext context);
-            void OnTrackedDevicePosition(InputAction.CallbackContext context);
-            void OnTrackedDeviceOrientation(InputAction.CallbackContext context);
-            void OnPause(InputAction.CallbackContext context);
+            if (m_KeyboardMouseSchemeIndex == -1) m_KeyboardMouseSchemeIndex = asset.FindControlSchemeIndex("KeyboardMouse");
+            return asset.controlSchemes[m_KeyboardMouseSchemeIndex];
         }
-        public interface ICharacterActions
-        {
-            void OnLeft_PullTrigger(InputAction.CallbackContext context);
-            void OnRight_PullTrigger(InputAction.CallbackContext context);
-            void OnMove(InputAction.CallbackContext context);
-            void OnLook(InputAction.CallbackContext context);
-            void OnLeft_Reload(InputAction.CallbackContext context);
-            void OnRight_Reload(InputAction.CallbackContext context);
-            void OnInteraction(InputAction.CallbackContext context);
-            void OnDash(InputAction.CallbackContext context);
-        }
+    }
+    public interface IUIActions
+    {
+        void OnNavigate(InputAction.CallbackContext context);
+        void OnSubmit(InputAction.CallbackContext context);
+        void OnCancel(InputAction.CallbackContext context);
+        void OnPoint(InputAction.CallbackContext context);
+        void OnClick(InputAction.CallbackContext context);
+        void OnScrollWheel(InputAction.CallbackContext context);
+        void OnMiddleClick(InputAction.CallbackContext context);
+        void OnRightClick(InputAction.CallbackContext context);
+        void OnTrackedDevicePosition(InputAction.CallbackContext context);
+        void OnTrackedDeviceOrientation(InputAction.CallbackContext context);
+        void OnPause(InputAction.CallbackContext context);
+    }
+    public interface ICharacterActions
+    {
+        void OnLeft_PullTrigger(InputAction.CallbackContext context);
+        void OnRight_PullTrigger(InputAction.CallbackContext context);
+        void OnMove(InputAction.CallbackContext context);
+        void OnLook(InputAction.CallbackContext context);
+        void OnLeft_Reload(InputAction.CallbackContext context);
+        void OnRight_Reload(InputAction.CallbackContext context);
+        void OnInteraction(InputAction.CallbackContext context);
+        void OnDash(InputAction.CallbackContext context);
     }
 }
