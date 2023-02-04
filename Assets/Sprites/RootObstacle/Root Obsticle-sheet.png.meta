@@ -1,0 +1,1455 @@
+fileFormatVersion: 2
+guid: 14b4c9ddd65e1c542ab0f8871995fd11
+TextureImporter:
+  internalIDToNameTable: []
+  externalObjects: {}
+  serializedVersion: 12
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMasterTextureLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 0
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 0
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 30
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 3
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 0
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Server
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Android
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: Root Obsticle-sheet_0
+      rect:
+        serializedVersion: 2
+        x: 11
+        y: 23
+        width: 10
+        height: 11
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: eb6aa980442d0c840989435990d5a043
+      internalID: 1388057579
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Root Obsticle-sheet_1
+      rect:
+        serializedVersion: 2
+        x: 70
+        y: 23
+        width: 11
+        height: 11
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a7062f185412b6343ac5ec4342cc30d6
+      internalID: 1206958636
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Root Obsticle-sheet_2
+      rect:
+        serializedVersion: 2
+        x: 130
+        y: 23
+        width: 11
+        height: 11
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b32bda7067090234eb4fe2b5d30e1030
+      internalID: -784329102
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Root Obsticle-sheet_3
+      rect:
+        serializedVersion: 2
+        x: 190
+        y: 23
+        width: 10
+        height: 11
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 537fe930f1e4d134f84a962116bfcf4e
+      internalID: -1907795484
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Root Obsticle-sheet_4
+      rect:
+        serializedVersion: 2
+        x: 250
+        y: 23
+        width: 10
+        height: 11
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 10f406b69383ca94ba7c45523a3f23a4
+      internalID: -1842675104
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Root Obsticle-sheet_5
+      rect:
+        serializedVersion: 2
+        x: 309
+        y: 23
+        width: 11
+        height: 11
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0e973af6d1d09d9499307f22aaa12d15
+      internalID: 1829348074
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Root Obsticle-sheet_6
+      rect:
+        serializedVersion: 2
+        x: 367
+        y: 21
+        width: 14
+        height: 13
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7111db76af9e0a94790a80de6d227a46
+      internalID: -2092532908
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Root Obsticle-sheet_7
+      rect:
+        serializedVersion: 2
+        x: 427
+        y: 21
+        width: 14
+        height: 13
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6486f77a2f6b1c142ba07f8988d8b4f3
+      internalID: -1597991826
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Root Obsticle-sheet_8
+      rect:
+        serializedVersion: 2
+        x: 487
+        y: 21
+        width: 14
+        height: 13
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8ddeea1572ea3704fa4cc1c955ba4500
+      internalID: 541268249
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Root Obsticle-sheet_9
+      rect:
+        serializedVersion: 2
+        x: 548
+        y: 21
+        width: 13
+        height: 13
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7ede85cfecb0d5e4aa366835483f764b
+      internalID: 829815451
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Root Obsticle-sheet_10
+      rect:
+        serializedVersion: 2
+        x: 608
+        y: 21
+        width: 14
+        height: 13
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b2ed93f8930c5b743a640bda762ba1fc
+      internalID: -1081176322
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Root Obsticle-sheet_11
+      rect:
+        serializedVersion: 2
+        x: 668
+        y: 21
+        width: 14
+        height: 13
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 829bbdb102ef7cb4395904af099db2a1
+      internalID: 1656501199
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Root Obsticle-sheet_12
+      rect:
+        serializedVersion: 2
+        x: 726
+        y: 18
+        width: 19
+        height: 19
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3faa4ea0006651948bdec298f8aef05f
+      internalID: 721011128
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Root Obsticle-sheet_13
+      rect:
+        serializedVersion: 2
+        x: 788
+        y: 18
+        width: 17
+        height: 19
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fa8ec410bda78b344b5b17ac6e771015
+      internalID: 483513114
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Root Obsticle-sheet_14
+      rect:
+        serializedVersion: 2
+        x: 847
+        y: 18
+        width: 18
+        height: 19
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e0f57abfc57a2704baabecf732033502
+      internalID: -1000412138
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Root Obsticle-sheet_15
+      rect:
+        serializedVersion: 2
+        x: 907
+        y: 18
+        width: 18
+        height: 19
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 14de46bc4c123a8439c37440a8ef5799
+      internalID: 1352044964
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Root Obsticle-sheet_16
+      rect:
+        serializedVersion: 2
+        x: 967
+        y: 18
+        width: 19
+        height: 19
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2c79a145c0150a544b919d44f96277bf
+      internalID: 1143866109
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Root Obsticle-sheet_17
+      rect:
+        serializedVersion: 2
+        x: 1027
+        y: 18
+        width: 19
+        height: 19
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d16973a5be4c5194987882ae35c55c72
+      internalID: 2062658516
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Root Obsticle-sheet_18
+      rect:
+        serializedVersion: 2
+        x: 1086
+        y: 19
+        width: 21
+        height: 20
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c685255dc8a8d784bb8971673ebfcd03
+      internalID: -1749144724
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Root Obsticle-sheet_19
+      rect:
+        serializedVersion: 2
+        x: 1146
+        y: 18
+        width: 21
+        height: 21
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e1c80fe52f43d2d47811a2823638cc52
+      internalID: -1076133148
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Root Obsticle-sheet_20
+      rect:
+        serializedVersion: 2
+        x: 1206
+        y: 18
+        width: 21
+        height: 21
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 14c7f9a050accb549b0d288b8557e47e
+      internalID: 460017029
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Root Obsticle-sheet_21
+      rect:
+        serializedVersion: 2
+        x: 1266
+        y: 18
+        width: 21
+        height: 21
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 86481feee63685842baa7708b40fa446
+      internalID: -540325657
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Root Obsticle-sheet_22
+      rect:
+        serializedVersion: 2
+        x: 1325
+        y: 18
+        width: 23
+        height: 21
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 36bfc8c507ca1824989d8e8dc0a2e052
+      internalID: 691278230
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Root Obsticle-sheet_23
+      rect:
+        serializedVersion: 2
+        x: 1385
+        y: 18
+        width: 23
+        height: 21
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: dad5d9e594ab5d94783703c9d0e40546
+      internalID: -456745130
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Root Obsticle-sheet_24
+      rect:
+        serializedVersion: 2
+        x: 1445
+        y: 18
+        width: 23
+        height: 21
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e01bd09819142e24e8e4827f78f30bca
+      internalID: 994323318
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Root Obsticle-sheet_25
+      rect:
+        serializedVersion: 2
+        x: 1506
+        y: 18
+        width: 22
+        height: 21
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c4398dc68ccf308438d6cea81ab67b42
+      internalID: -2072084230
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Root Obsticle-sheet_26
+      rect:
+        serializedVersion: 2
+        x: 1566
+        y: 19
+        width: 21
+        height: 20
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 24a15f89e7002464bad0f479c633164a
+      internalID: 306212255
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Root Obsticle-sheet_27
+      rect:
+        serializedVersion: 2
+        x: 1626
+        y: 18
+        width: 21
+        height: 21
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 38827e0a44b77e0439911d9600f9a024
+      internalID: 425879556
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Root Obsticle-sheet_28
+      rect:
+        serializedVersion: 2
+        x: 1686
+        y: 18
+        width: 21
+        height: 21
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a9bfcb22b712c11489703ebe305a26ce
+      internalID: -1639965014
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Root Obsticle-sheet_29
+      rect:
+        serializedVersion: 2
+        x: 1746
+        y: 18
+        width: 24
+        height: 21
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ab1689ea313755f43bb6ea8b8bde6431
+      internalID: 27913982
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Root Obsticle-sheet_30
+      rect:
+        serializedVersion: 2
+        x: 1805
+        y: 18
+        width: 28
+        height: 21
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: cd028607f8c7f9245b05c898d7dfd7e7
+      internalID: 169353399
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Root Obsticle-sheet_31
+      rect:
+        serializedVersion: 2
+        x: 1865
+        y: 18
+        width: 32
+        height: 21
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f2854c3fea015da4bb49309ad370c3af
+      internalID: -382190697
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Root Obsticle-sheet_32
+      rect:
+        serializedVersion: 2
+        x: 1925
+        y: 18
+        width: 35
+        height: 21
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4a0280fa65799be41b356925197bcbbb
+      internalID: -1856467010
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Root Obsticle-sheet_33
+      rect:
+        serializedVersion: 2
+        x: 1986
+        y: 19
+        width: 35
+        height: 20
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 52623dc9da70db14d8a4980653fc1f1b
+      internalID: -1568395992
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Root Obsticle-sheet_34
+      rect:
+        serializedVersion: 2
+        x: 2046
+        y: 18
+        width: 39
+        height: 21
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 28f67aa6b8d0f47418128af335fdafb9
+      internalID: -585130881
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Root Obsticle-sheet_35
+      rect:
+        serializedVersion: 2
+        x: 2106
+        y: 18
+        width: 39
+        height: 21
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 57e5029ad030a1f49ac265feb04b1a0d
+      internalID: -883002582
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Root Obsticle-sheet_36
+      rect:
+        serializedVersion: 2
+        x: 2166
+        y: 18
+        width: 40
+        height: 21
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0e9fd9a85d54a2c408c7b80caaaf6a7e
+      internalID: 56923735
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Root Obsticle-sheet_37
+      rect:
+        serializedVersion: 2
+        x: 2225
+        y: 18
+        width: 41
+        height: 21
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3ceb54047c059234995932a02a14e9a6
+      internalID: 1952498247
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Root Obsticle-sheet_38
+      rect:
+        serializedVersion: 2
+        x: 2285
+        y: 18
+        width: 41
+        height: 21
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 53fc212ee0d9eee49b6d54953f4bd744
+      internalID: -912206223
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Root Obsticle-sheet_39
+      rect:
+        serializedVersion: 2
+        x: 2345
+        y: 18
+        width: 42
+        height: 21
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 52dc58a62de5bee4ab6535a4f56bb4a4
+      internalID: 1396188822
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Root Obsticle-sheet_40
+      rect:
+        serializedVersion: 2
+        x: 2406
+        y: 18
+        width: 41
+        height: 21
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c27508021f9346240ac0c93939a45ccd
+      internalID: -176154970
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Root Obsticle-sheet_41
+      rect:
+        serializedVersion: 2
+        x: 2466
+        y: 19
+        width: 41
+        height: 20
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3f524a85b2f5a884bb09ab8a032ccfec
+      internalID: -1533055301
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Root Obsticle-sheet_42
+      rect:
+        serializedVersion: 2
+        x: 2526
+        y: 18
+        width: 40
+        height: 21
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 01130bf6222ca5c4399550fee0d86886
+      internalID: 1548665483
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Root Obsticle-sheet_43
+      rect:
+        serializedVersion: 2
+        x: 2586
+        y: 18
+        width: 40
+        height: 21
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fa5dc860ecdda64499f526ac5684bb67
+      internalID: 322714869
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Root Obsticle-sheet_44
+      rect:
+        serializedVersion: 2
+        x: 2646
+        y: 18
+        width: 40
+        height: 23
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4bb0f8235d0c5f44b9193fecec535c99
+      internalID: 952135968
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Root Obsticle-sheet_45
+      rect:
+        serializedVersion: 2
+        x: 2705
+        y: 18
+        width: 41
+        height: 23
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 566de78a62d8ae44fae1d7b962023fd8
+      internalID: -1262259134
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Root Obsticle-sheet_46
+      rect:
+        serializedVersion: 2
+        x: 2765
+        y: 18
+        width: 40
+        height: 23
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fea82e30b5c227940be35edadf6740da
+      internalID: -94356747
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Root Obsticle-sheet_47
+      rect:
+        serializedVersion: 2
+        x: 2825
+        y: 18
+        width: 42
+        height: 21
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4b5ee5ee28ba2a143b772660f7a504af
+      internalID: 2113225670
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Root Obsticle-sheet_48
+      rect:
+        serializedVersion: 2
+        x: 2886
+        y: 19
+        width: 41
+        height: 20
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c829ec5ea56e99b4eb8b3638a3ae811c
+      internalID: -1067724470
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Root Obsticle-sheet_49
+      rect:
+        serializedVersion: 2
+        x: 2946
+        y: 18
+        width: 41
+        height: 21
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 41e0d2187d028c44b9d72c09d74b5461
+      internalID: -1321943103
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Root Obsticle-sheet_50
+      rect:
+        serializedVersion: 2
+        x: 3006
+        y: 18
+        width: 40
+        height: 21
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f5eec7ccd54a9294d9a3ada52f485115
+      internalID: -327814563
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Root Obsticle-sheet_51
+      rect:
+        serializedVersion: 2
+        x: 3066
+        y: 18
+        width: 40
+        height: 21
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bfd8578b4258f174c8a27453b362ff42
+      internalID: 275410060
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Root Obsticle-sheet_52
+      rect:
+        serializedVersion: 2
+        x: 3125
+        y: 18
+        width: 41
+        height: 21
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f135bb4966a2ac14a8cb6ebcca75be9e
+      internalID: 1220569235
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Root Obsticle-sheet_53
+      rect:
+        serializedVersion: 2
+        x: 3185
+        y: 18
+        width: 41
+        height: 21
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7fd270ed78e902b4b8e313688442d5ce
+      internalID: -73565341
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Root Obsticle-sheet_54
+      rect:
+        serializedVersion: 2
+        x: 3245
+        y: 18
+        width: 42
+        height: 23
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 42aa842c5c6b4b94d8cd7043b59ad807
+      internalID: -1946712373
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Root Obsticle-sheet_55
+      rect:
+        serializedVersion: 2
+        x: 3306
+        y: 18
+        width: 41
+        height: 23
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0ae025f0e820b0945a7e2907c51e7bb6
+      internalID: 1908926731
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Root Obsticle-sheet_56
+      rect:
+        serializedVersion: 2
+        x: 3366
+        y: 19
+        width: 41
+        height: 22
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 844dcab33669f6f4bb85df5e403862b3
+      internalID: 2051545568
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Root Obsticle-sheet_57
+      rect:
+        serializedVersion: 2
+        x: 3426
+        y: 18
+        width: 40
+        height: 21
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2a95e3758fa7b5a458a38106d037d410
+      internalID: -725691298
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Root Obsticle-sheet_58
+      rect:
+        serializedVersion: 2
+        x: 3486
+        y: 18
+        width: 40
+        height: 21
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e76d3b7ac084387448a7924db6a4bb3c
+      internalID: -166215227
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Root Obsticle-sheet_59
+      rect:
+        serializedVersion: 2
+        x: 3546
+        y: 18
+        width: 40
+        height: 21
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 81ef3274ed8227249884ee2ebd26f574
+      internalID: 930029984
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    physicsShape: []
+    bones: []
+    spriteID: 5e97eb03825dee720800000000000000
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    nameFileIdTable:
+      Root Obsticle-sheet_22: 691278230
+      Root Obsticle-sheet_40: -176154970
+      Root Obsticle-sheet_52: 1220569235
+      Root Obsticle-sheet_0: 1388057579
+      Root Obsticle-sheet_1: 1206958636
+      Root Obsticle-sheet_53: -73565341
+      Root Obsticle-sheet_29: 27913982
+      Root Obsticle-sheet_32: -1856467010
+      Root Obsticle-sheet_2: -784329102
+      Root Obsticle-sheet_27: 425879556
+      Root Obsticle-sheet_42: 1548665483
+      Root Obsticle-sheet_12: 721011128
+      Root Obsticle-sheet_10: -1081176322
+      Root Obsticle-sheet_23: -456745130
+      Root Obsticle-sheet_33: -1568395992
+      Root Obsticle-sheet_44: 952135968
+      Root Obsticle-sheet_50: -327814563
+      Root Obsticle-sheet_21: -540325657
+      Root Obsticle-sheet_25: -2072084230
+      Root Obsticle-sheet_54: -1946712373
+      Root Obsticle-sheet_24: 994323318
+      Root Obsticle-sheet_36: 56923735
+      Root Obsticle-sheet_55: 1908926731
+      Root Obsticle-sheet_31: -382190697
+      Root Obsticle-sheet_38: -912206223
+      Root Obsticle-sheet_45: -1262259134
+      Root Obsticle-sheet_9: 829815451
+      Root Obsticle-sheet_16: 1143866109
+      Root Obsticle-sheet_51: 275410060
+      Root Obsticle-sheet_41: -1533055301
+      Root Obsticle-sheet_13: 483513114
+      Root Obsticle-sheet_59: 930029984
+      Root Obsticle-sheet_7: -1597991826
+      Root Obsticle-sheet_4: -1842675104
+      Root Obsticle-sheet_28: -1639965014
+      Root Obsticle-sheet_56: 2051545568
+      Root Obsticle-sheet_34: -585130881
+      Root Obsticle-sheet_3: -1907795484
+      Root Obsticle-sheet_49: -1321943103
+      Root Obsticle-sheet_35: -883002582
+      Root Obsticle-sheet_15: 1352044964
+      Root Obsticle-sheet_30: 169353399
+      Root Obsticle-sheet_39: 1396188822
+      Root Obsticle-sheet_57: -725691298
+      Root Obsticle-sheet_6: -2092532908
+      Root Obsticle-sheet_20: 460017029
+      Root Obsticle-sheet_11: 1656501199
+      Root Obsticle-sheet_26: 306212255
+      Root Obsticle-sheet_46: -94356747
+      Root Obsticle-sheet_43: 322714869
+      Root Obsticle-sheet_47: 2113225670
+      Root Obsticle-sheet_37: 1952498247
+      Root Obsticle-sheet_48: -1067724470
+      Root Obsticle-sheet_5: 1829348074
+      Root Obsticle-sheet_58: -166215227
+      Root Obsticle-sheet_14: -1000412138
+      Root Obsticle-sheet_19: -1076133148
+      Root Obsticle-sheet_17: 2062658516
+      Root Obsticle-sheet_8: 541268249
+      Root Obsticle-sheet_18: -1749144724
+  spritePackingTag: 
+  pSDRemoveMatte: 0
+  pSDShowRemoveMatteOption: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
