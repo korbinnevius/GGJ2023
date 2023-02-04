@@ -23,9 +23,9 @@ public class Apple : MonoBehaviour
 
     public IEnumerator SpawnApples()
     {
-        
-        
-        
+
+        return null;
+
     }
 
 }
