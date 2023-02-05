@@ -29,8 +29,8 @@ public class AIController : MonoBehaviour
     private void Start()
     {
     
-        behaviourTree = behaviourTree.Clone();
-        behaviourTree.Bind(this);
+        // behaviourTree = behaviourTree.Clone();
+        // behaviourTree.Bind(this);
         
         assignedCharacter.Controller = this;
         AssignedCharacter.VisionPerception.OnPerceptionUpdate.AddListener(OnPerceptionUpdate);
