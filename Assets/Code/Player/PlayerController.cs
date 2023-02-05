@@ -175,6 +175,15 @@ public class PlayerController : MonoBehaviour
         interactInput = false;
     }
 
+    private void OnDashStarted(InputAction.CallbackContext context)
+    {
+        interactInput = true;
+        if (PlayerCharacter != null)
+        {
+            playerCharacter.DashAbilityController.CurrentAbility.Fire();
+        }
+    }
+    
     private void DashOnPerformed(InputAction.CallbackContext context)
     {
         playerCharacter.DashAbilityController.PullTrigger();

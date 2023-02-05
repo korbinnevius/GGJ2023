@@ -525,7 +525,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 8225181141885316629}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalPosition: {x: 0.569, y: -0.02, z: 0.23}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -651,9 +651,9 @@ MonoBehaviour:
   animatorComp: {fileID: 8225181141978841269}
   characterControllerComp: {fileID: 8225181141978841268}
   healthComp: {fileID: 0}
-  leftAbilityController: {fileID: 0}
-  rightAbilityController: {fileID: 0}
-  dashAbilityController: {fileID: 0}
+  leftAbilityController: {fileID: 8225181140926550650}
+  rightAbilityController: {fileID: 8225181141560891005}
+  dashAbilityController: {fileID: 8225181141117543113}
   meleeAbilityConfigConfig: {fileID: 11400000, guid: bfbd4317472da1642bf3eee2094927fc,
     type: 2}
   raycastAbilityConfig: {fileID: 11400000, guid: 87d9400b38605a1439c82c4a8ea71e78,
@@ -663,6 +663,7 @@ MonoBehaviour:
   onUseInteractable:
     m_PersistentCalls:
       m_Calls: []
+  DashMultiplier: 0
 --- !u!54 &8225181141978841270
 Rigidbody:
   m_ObjectHideFlags: 0

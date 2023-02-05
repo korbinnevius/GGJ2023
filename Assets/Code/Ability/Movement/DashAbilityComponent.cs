@@ -62,24 +62,11 @@ public class DashAbilityComponent : AbilityComponent
             PlayerCharacter playerCharacter = (PlayerCharacter)abilityController.Owner;
             if (playerCharacter)
             {
-                // public void StartDash()
-                // {
-                //     if (IsDashing)
-                //         return;
-                //
-                //     if (cooldownTimer.IsFinished)
-                //     {
-                //         IsDashing = true;
-                //         cooldownTimer.ResetTimer();
-                //         //DashDirection = transform.rotation.eulerAngles;
-                //     }
-                // }
-                //
-                // public void Dash()
-                // {
-                //     characterController.Move(DashDirection * (MoveSpeed * DashMultiplier) * Time.deltaTime);
-                //     //transform.position += DashDirection * (MoveSpeed * DashMultiplier) * Time.deltaTime;
-                // }
+                Debug.Log("Fire Dash");
+                playerCharacter.Dash();
+                /*PlayerMovement playerMovement = (PlayerMovement)playerCharacter.MovementComp;
+                if(playerMovement)
+                    playerMovement.StartDash();*/
             }
         }
     }

@@ -265,5 +265,11 @@ public class PlayerCharacter : Character
         return true;
     }
 
-    
+
+    public void Dash()
+    {
+        CharacterControllerComp.Move(new Vector3(PlayerController.MoveInput.x, 0.0f, PlayerController.MoveInput.y) * (DashMultiplier * Time.deltaTime * moveSpeed));
+    }
+
+    public float DashMultiplier;
 }

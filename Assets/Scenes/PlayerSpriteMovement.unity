@@ -1333,6 +1333,7 @@ MonoBehaviour:
   onUseInteractable:
     m_PersistentCalls:
       m_Calls: []
+  DashMultiplier: 0
 --- !u!114 &1896302806
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1924,6 +1925,7 @@ MonoBehaviour:
   onUseInteractable:
     m_PersistentCalls:
       m_Calls: []
+  DashMultiplier: 20
 --- !u!4 &6263508260624779514
 Transform:
   m_ObjectHideFlags: 0
@@ -2397,7 +2399,7 @@ MonoBehaviour:
   ownerTag: 
   isTriggerHeld: 0
   isAutoFire: 0
-  fireRate: 1
+  fireRate: 5
 --- !u!114 &7972668778976508766
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2437,6 +2439,31 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 8225181141885316630, guid: 36147ffdccbaaab43bfb475b5c1dbbc2,
+        type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8225181141885316630, guid: 36147ffdccbaaab43bfb475b5c1dbbc2,
+        type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8225181141885316630, guid: 36147ffdccbaaab43bfb475b5c1dbbc2,
+        type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8225181141885316630, guid: 36147ffdccbaaab43bfb475b5c1dbbc2,
+        type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8225181141885316630, guid: 36147ffdccbaaab43bfb475b5c1dbbc2,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 8225181141978841258, guid: 36147ffdccbaaab43bfb475b5c1dbbc2,
         type: 3}
       propertyPath: m_Name
@@ -2447,6 +2474,12 @@ PrefabInstance:
       propertyPath: playerUI
       value: 
       objectReference: {fileID: 496154708}
+    - target: {fileID: 8225181141978841264, guid: 36147ffdccbaaab43bfb475b5c1dbbc2,
+        type: 3}
+      propertyPath: bulletPrefab
+      value: 
+      objectReference: {fileID: 5247659613416637237, guid: 616a11ca5b6b94a4abec2996b0dcae3e,
+        type: 3}
     - target: {fileID: 8225181141978841264, guid: 36147ffdccbaaab43bfb475b5c1dbbc2,
         type: 3}
       propertyPath: playerCamera
@@ -2524,19 +2557,9 @@ PrefabInstance:
       objectReference: {fileID: 4064287071772652579}
     - target: {fileID: 8225181141978841271, guid: 36147ffdccbaaab43bfb475b5c1dbbc2,
         type: 3}
-      propertyPath: dashAbilityController
-      value: 
-      objectReference: {fileID: 7972668778976508766}
-    - target: {fileID: 8225181141978841271, guid: 36147ffdccbaaab43bfb475b5c1dbbc2,
-        type: 3}
-      propertyPath: leftAbilityController
-      value: 
-      objectReference: {fileID: 1133424181153766891}
-    - target: {fileID: 8225181141978841271, guid: 36147ffdccbaaab43bfb475b5c1dbbc2,
-        type: 3}
-      propertyPath: rightAbilityController
-      value: 
-      objectReference: {fileID: 7972668778699536201}
+      propertyPath: DashMultiplier
+      value: 20
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 36147ffdccbaaab43bfb475b5c1dbbc2, type: 3}
 --- !u!223 &8262435717845984790
