@@ -58,6 +58,9 @@ public class PlayerController : MonoBehaviour
 
         inputActions.Character.Dash.performed += DashOnPerformed;
         
+        //shooting testing code
+        inputActions.Character.Left_PullTrigger.performed += ShootOnPerformed;
+        
         inputActions.Character.Enable();
     }
 
@@ -95,6 +98,8 @@ public class PlayerController : MonoBehaviour
             inputActions.Character.Disable();
             
             inputActions.Character.Dash.performed -= DashOnPerformed;
+            
+            inputActions.Character.Left_PullTrigger.performed += ShootOnPerformed;
 
         }
         
@@ -172,9 +177,19 @@ public class PlayerController : MonoBehaviour
 
     private void DashOnPerformed(InputAction.CallbackContext context)
     {
-        //playerCharacter.DashAbilityController.PullTrigger();
+        playerCharacter.DashAbilityController.PullTrigger();
     }
-    
+
+    [SerializeField] private GameObject bulletPrefab;
+    [SerializeField] private Transform firePoint;
+    [SerializeField] private float fireVelocity;
+    private void ShootOnPerformed(InputAction.CallbackContext context)
+    {
+        playerCharacter.LeftAbilityController.PullTrigger();
+        GameObject bullet = Instantiate(bulletPrefab, firePoint.position, firePoint.rotation);
+        bullet.GetComponent<Rigidbody>().AddForce(firePoint.forward * fireVelocity, ForceMode.Force);
+        Debug.Log("shoot");
+    }
     #endregion
     #region Character Methods
     public void PossessCharacter(PlayerCharacter character)
