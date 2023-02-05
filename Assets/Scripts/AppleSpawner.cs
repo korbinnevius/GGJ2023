@@ -6,7 +6,6 @@ using Random = UnityEngine.Random;
 public class AppleSpawner : MonoBehaviour
 {
     public GameObject apple;
-    public GameObject explosion;
     public bool CanSpawn;
     public float MaxRange;
    
@@ -27,7 +26,7 @@ public class AppleSpawner : MonoBehaviour
     public IEnumerator SpawnApples()
     {
 
-        Vector3 randomSpawnPosition = new Vector3(Random.Range(-110, -160), Random.Range(80, 50), 238);
+        Vector3 randomSpawnPosition = new Vector3(Random.Range(13, -6), Random.Range(3, -3), -.1f);
             Instantiate(apple, randomSpawnPosition, Quaternion.identity);
             yield return null;
     }
