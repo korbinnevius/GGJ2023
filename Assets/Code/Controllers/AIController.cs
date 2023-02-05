@@ -3,7 +3,7 @@ using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
-using TheKiwiCoder;
+//using TheKiwiCoder;
 using UnityEngine;
 using UnityEngine.Serialization;
 using Random = UnityEngine.Random;
@@ -18,8 +18,8 @@ public class AIController : MonoBehaviour
     [SerializeField] private LevelArea assignedLevelArea;
     public LevelArea AssignedLevelArea { get => assignedLevelArea; set => assignedLevelArea = value; }
 
-    [SerializeField] private BehaviourTree behaviourTree;
-    public BehaviourTree BehaviourTree { get => behaviourTree; set => behaviourTree = value; }
+    // [SerializeField] private BehaviourTree behaviourTree;
+    // public BehaviourTree BehaviourTree { get => behaviourTree; set => behaviourTree = value; }
     
     
     #endregion
@@ -60,10 +60,10 @@ public class AIController : MonoBehaviour
 
     #region Behaviour
 
-    private Context CreateBehaviourTreeContext() 
-    {
-        return Context.CreateFromGameObject(gameObject);
-    }
+    // private Context CreateBehaviourTreeContext() 
+    // {
+    //     return Context.CreateFromGameObject(gameObject);
+    // }
 
     #endregion
     #region State

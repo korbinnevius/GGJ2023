@@ -7,16 +7,12 @@ public class EndTrigger : MonoBehaviour
 {
     public RootsGameManager rootsGM;
     [SerializeField] private HealthComponent bossHealth;
-    //[SerializeField] private HealthComponent playerHealth;
-
-    private void Awake()
-    {
-        //playerHealth = GetComponent<HealthComponent>();
-    }
+    [SerializeField] private HealthComponent playerHealth;
 
     private void Update()
     {
         BossIsDead();
+        PlayerIsDead();
     }
 
     private void BossIsDead()
@@ -27,11 +23,11 @@ public class EndTrigger : MonoBehaviour
         }
     }
     
-    // private void PlayerIsDead()
-    // {
-    //     if (playerHealth.CurrentHealth <= 0)
-    //     {
-    //         rootsGM.CompleteLevel();
-    //     }
-    // }
+    private void PlayerIsDead()
+    {
+        if (playerHealth.CurrentHealth <= 0)
+        {
+            rootsGM.EndGame();
+        }
+    }
 }

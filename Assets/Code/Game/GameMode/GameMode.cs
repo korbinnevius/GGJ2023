@@ -26,8 +26,8 @@ public class GameMode : Singleton<GameMode>
     [SerializeField] private PlayerCharacter playerCharacter;
     public PlayerCharacter PlayerCharacter { get => playerCharacter; set => playerCharacter = value; }
 
-    [SerializeField] private Transform playerSpawnPoint;
-    public Transform PlayerSpawnPoint { get => playerSpawnPoint; set => playerSpawnPoint = value; }
+    // [SerializeField] private Transform playerSpawnPoint;
+    // public Transform PlayerSpawnPoint { get => playerSpawnPoint; set => playerSpawnPoint = value; }
     #endregion
 
     #region Prefabs
@@ -111,7 +111,7 @@ public class GameMode : Singleton<GameMode>
 
         playerController.PlayerCharacter = playerCharacter;
         PlayerController.PossessCharacter(playerCharacter);
-        playerCharacter.transform.position = playerSpawnPoint.transform.position;
+        //playerCharacter.transform.position = playerSpawnPoint.transform.position;
 
         StartGame();
     }
