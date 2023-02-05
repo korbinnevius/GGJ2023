@@ -1363,7 +1363,7 @@ TilemapRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 2
+  m_SortingOrder: 3
   m_ChunkSize: {x: 32, y: 32, z: 32}
   m_ChunkCullingBounds: {x: 0.16666669, y: 0.16666669, z: 0}
   m_MaxChunkCount: 16
@@ -8770,3 +8770,72 @@ Transform:
   m_Father: {fileID: 1338489088}
   m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1001 &233542455266865754
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 4971121592898107991, guid: 9949ce8db961bd943a071336ca9b49d3,
+        type: 3}
+      propertyPath: m_Name
+      value: VineProjectile
+      objectReference: {fileID: 0}
+    - target: {fileID: 6593299083045911808, guid: 9949ce8db961bd943a071336ca9b49d3,
+        type: 3}
+      propertyPath: m_RootOrder
+      value: 11
+      objectReference: {fileID: 0}
+    - target: {fileID: 6593299083045911808, guid: 9949ce8db961bd943a071336ca9b49d3,
+        type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -11.796
+      objectReference: {fileID: 0}
+    - target: {fileID: 6593299083045911808, guid: 9949ce8db961bd943a071336ca9b49d3,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 3.1525972
+      objectReference: {fileID: 0}
+    - target: {fileID: 6593299083045911808, guid: 9949ce8db961bd943a071336ca9b49d3,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: -4.263
+      objectReference: {fileID: 0}
+    - target: {fileID: 6593299083045911808, guid: 9949ce8db961bd943a071336ca9b49d3,
+        type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 0.7071079
+      objectReference: {fileID: 0}
+    - target: {fileID: 6593299083045911808, guid: 9949ce8db961bd943a071336ca9b49d3,
+        type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0.7071057
+      objectReference: {fileID: 0}
+    - target: {fileID: 6593299083045911808, guid: 9949ce8db961bd943a071336ca9b49d3,
+        type: 3}
+      propertyPath: m_LocalRotation.y
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6593299083045911808, guid: 9949ce8db961bd943a071336ca9b49d3,
+        type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6593299083045911808, guid: 9949ce8db961bd943a071336ca9b49d3,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 90
+      objectReference: {fileID: 0}
+    - target: {fileID: 6593299083045911808, guid: 9949ce8db961bd943a071336ca9b49d3,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6593299083045911808, guid: 9949ce8db961bd943a071336ca9b49d3,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 9949ce8db961bd943a071336ca9b49d3, type: 3}

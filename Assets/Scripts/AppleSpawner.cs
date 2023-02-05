@@ -8,6 +8,7 @@ public class AppleSpawner : MonoBehaviour
     public GameObject apple;
     public bool CanSpawn;
     public float MaxRange;
+    public int Rota;
    
     private void Start()
     {
@@ -26,8 +27,8 @@ public class AppleSpawner : MonoBehaviour
     public IEnumerator SpawnApples()
     {
 
-        Vector3 randomSpawnPosition = new Vector3(Random.Range(13, -6), Random.Range(3, -3), -.1f);
-            Instantiate(apple, randomSpawnPosition, Quaternion.identity);
+        Vector3 randomSpawnPosition = new Vector3(Random.Range(-23, 23),0.1f, Random.Range(8,-12));
+            Instantiate(apple, randomSpawnPosition, apple.transform.rotation);
             yield return null;
     }
 }
