@@ -6,9 +6,11 @@ using UnityEngine;
 public class takeDamage : MonoBehaviour
 {
     private HealthComponent _healthComponent;
+    public RootsGameManager _rootsGameManager;
 
     private void Awake()
     {
+        _rootsGameManager = GetComponent<RootsGameManager>();
         _healthComponent = GetComponent<HealthComponent>();
     }
 

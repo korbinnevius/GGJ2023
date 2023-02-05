@@ -4,11 +4,11 @@ using UnityEngine;
 
 public class LevelArea : MonoBehaviour
 {
-    [SerializeField] private AICharacter characterPrefab;
-    public AICharacter CharacterPrefab { get => characterPrefab; set => characterPrefab = value; }
-    
-    [SerializeField] private Transform spawnPoint;
-    public Transform SpawnPoint { get => spawnPoint; set => spawnPoint = value; }
+    // [SerializeField] private AICharacter characterPrefab;
+    // public AICharacter CharacterPrefab { get => characterPrefab; set => characterPrefab = value; }
+    //
+    // [SerializeField] private Transform spawnPoint;
+    // public Transform SpawnPoint { get => spawnPoint; set => spawnPoint = value; }
     
     [SerializeField] private PatrolCircuit patrolCircuit;
     public PatrolCircuit PatrolCircuit { get => patrolCircuit; set => patrolCircuit = value; }
@@ -28,14 +28,14 @@ public class LevelArea : MonoBehaviour
         
     }
 
-    public void SpawnCharacter()
-    {
-        AICharacter enemy = Instantiate(characterPrefab, null);
-        enemy.gameObject.transform.position = spawnPoint.position;
-        enemy.Controller.AssignedLevelArea = this;
-        //enemy.Controller.PushState(new PatrolState(enemy.Controller, patrolCircuit, 0));
-        // enemy.MovementComp.PatrolCircuit = patrolCircuit;
-        // enemy.MovementComp.ContinueToPatrolPoint();
-        Debug.Log("Spawned Character");
-    }
+    // public void SpawnCharacter()
+    // {
+    //     AICharacter enemy = Instantiate(characterPrefab, null);
+    //     enemy.gameObject.transform.position = spawnPoint.position;
+    //     enemy.Controller.AssignedLevelArea = this;
+    //     //enemy.Controller.PushState(new PatrolState(enemy.Controller, patrolCircuit, 0));
+    //     // enemy.MovementComp.PatrolCircuit = patrolCircuit;
+    //     // enemy.MovementComp.ContinueToPatrolPoint();
+    //     Debug.Log("Spawned Character");
+    // }
 }
