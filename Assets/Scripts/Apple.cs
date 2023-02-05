@@ -1,12 +1,14 @@
 using System.Collections;
 using System.Collections.Generic;
 using Unity.Mathematics;
+using Unity.VisualScripting;
 using UnityEngine;
 using Random = UnityEngine.Random;
 
 public class Apple : MonoBehaviour
 {
     public GameObject apple;
+    public GameObject explosion;
     public bool CanSpawn;
     public float MaxRange;
    
@@ -27,9 +29,19 @@ public class Apple : MonoBehaviour
     public IEnumerator SpawnApples()
     {
 
-        Vector3 randomSpawnPosition = new Vector3(Random.Range(-110, -160), Random.Range(80, 50), 235);
+        Vector3 randomSpawnPosition = new Vector3(Random.Range(-110, -160), Random.Range(80, 50), 238);
             Instantiate(apple, randomSpawnPosition, quaternion.identity);
-            return null;
+            yield return new WaitForSeconds(5);
+            yield return StartCoroutine(Appleexplode());
+    }
+
+    public IEnumerator Appleexplode()
+    {
+        
+        Instantiate(explosion,transform.position,quaternion.identity);
+        Destroy(apple);
+        Destroy(explosion);
+        yield return null;
     }
     
 }
