@@ -180,16 +180,18 @@ public class PlayerController : MonoBehaviour
         playerCharacter.DashAbilityController.PullTrigger();
     }
 
-    [SerializeField] private GameObject bulletPrefab;
+    [SerializeField] private RootsBullet bulletPrefab;
     [SerializeField] private Transform firePoint;
     [SerializeField] private float fireVelocity;
     private void ShootOnPerformed(InputAction.CallbackContext context)
     {
         playerCharacter.LeftAbilityController.PullTrigger();
-        GameObject bullet = Instantiate(bulletPrefab, firePoint.position, firePoint.rotation);
-        bullet.GetComponent<Rigidbody>().AddForce(firePoint.forward * fireVelocity, ForceMode.Force);
-        Debug.Log("shoot");
+        RootsBullet bullet = Instantiate(bulletPrefab, firePoint.position, firePoint.rotation);
+        //bullet.GetComponent<Rigidbody>().AddForce(firePoint.forward * fireVelocity, ForceMode.Force);
+        bullet.Fire(firePoint.forward, fireVelocity);
+        
     }
+    
     #endregion
     #region Character Methods
     public void PossessCharacter(PlayerCharacter character)
