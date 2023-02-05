@@ -39,9 +39,8 @@ public class Apple : MonoBehaviour
     {
         
         Instantiate(explosion,transform.position,quaternion.identity);
-        Destroy(apple);
-        Destroy(explosion);
+        DestroyImmediate(apple,true);
+        DestroyImmediate(explosion,true);
         yield return null;
     }
-    
 }
