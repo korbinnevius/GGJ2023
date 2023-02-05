@@ -471,8 +471,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   apple: {fileID: 991191995776490666, guid: 71c2c9e3c13ab184a8c4a1c22a848b2f, type: 3}
-  explosion: {fileID: 3746175161661773418, guid: 80b1bb50e5d75214ebb9af95857cf127,
-    type: 3}
   CanSpawn: 1
   MaxRange: 3
 --- !u!4 &461335309
@@ -1185,6 +1183,11 @@ PrefabInstance:
       propertyPath: Player
       value: 
       objectReference: {fileID: 626992621}
+    - target: {fileID: 6579891754654753630, guid: 409f4b0e9c563384db29166e5d53f225,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 6579891754997361206, guid: 409f4b0e9c563384db29166e5d53f225,
         type: 3}
       propertyPath: m_RootOrder
