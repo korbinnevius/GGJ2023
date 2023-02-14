@@ -1966,7 +1966,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Player: {fileID: 440545830}
   Base: {fileID: 3017679939446772359}
-  Speed: 50
+  Speed: 60
   MaxRange: 40
   CanShoot: 1
 --- !u!114 &109288870
@@ -5079,7 +5079,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Player: {fileID: 440545830}
   Base: {fileID: 504621646}
-  Speed: 50
+  Speed: 60
   MaxRange: 40
   CanShoot: 1
 --- !u!114 &332705101
@@ -5596,7 +5596,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!114 &378719310
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -8941,7 +8941,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Player: {fileID: 440545830}
   Base: {fileID: 1628805702}
-  Speed: 50
+  Speed: 60
   MaxRange: 40
   CanShoot: 1
 --- !u!114 &527761731
@@ -11220,7 +11220,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Player: {fileID: 440545830}
   Base: {fileID: 558444537}
-  Speed: 50
+  Speed: 60
   MaxRange: 40
   CanShoot: 1
 --- !u!114 &659761369
@@ -12323,7 +12323,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Player: {fileID: 440545830}
   Base: {fileID: 1891427056}
-  Speed: 50
+  Speed: 60
   MaxRange: 40
   CanShoot: 1
 --- !u!114 &721891061
@@ -14669,7 +14669,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Player: {fileID: 440545830}
   Base: {fileID: 1877384035}
-  Speed: 50
+  Speed: 60
   MaxRange: 40
   CanShoot: 1
 --- !u!114 &874314583
@@ -23236,7 +23236,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Player: {fileID: 440545830}
   Base: {fileID: 88721135}
-  Speed: 50
+  Speed: 60
   MaxRange: 40
   CanShoot: 1
 --- !u!114 &1494333310
@@ -29478,7 +29478,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Player: {fileID: 440545830}
   Base: {fileID: 1053503696}
-  Speed: 50
+  Speed: 60
   MaxRange: 40
   CanShoot: 1
 --- !u!114 &1909619824
