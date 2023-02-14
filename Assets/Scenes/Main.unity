@@ -1966,8 +1966,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Player: {fileID: 440545830}
   Base: {fileID: 3017679939446772359}
-  Speed: 60
-  MaxRange: 40
+  Speed: 37
+  MaxRange: 15
   CanShoot: 1
 --- !u!114 &109288870
 MonoBehaviour:
@@ -5079,8 +5079,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Player: {fileID: 440545830}
   Base: {fileID: 504621646}
-  Speed: 60
-  MaxRange: 40
+  Speed: 37
+  MaxRange: 15
   CanShoot: 1
 --- !u!114 &332705101
 MonoBehaviour:
@@ -8941,8 +8941,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Player: {fileID: 440545830}
   Base: {fileID: 1628805702}
-  Speed: 60
-  MaxRange: 40
+  Speed: 37
+  MaxRange: 15
   CanShoot: 1
 --- !u!114 &527761731
 MonoBehaviour:
@@ -11220,8 +11220,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Player: {fileID: 440545830}
   Base: {fileID: 558444537}
-  Speed: 60
-  MaxRange: 40
+  Speed: 37
+  MaxRange: 15
   CanShoot: 1
 --- !u!114 &659761369
 MonoBehaviour:
@@ -12323,8 +12323,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Player: {fileID: 440545830}
   Base: {fileID: 1891427056}
-  Speed: 60
-  MaxRange: 40
+  Speed: 37
+  MaxRange: 15
   CanShoot: 1
 --- !u!114 &721891061
 MonoBehaviour:
@@ -14669,8 +14669,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Player: {fileID: 440545830}
   Base: {fileID: 1877384035}
-  Speed: 60
-  MaxRange: 40
+  Speed: 37
+  MaxRange: 15
   CanShoot: 1
 --- !u!114 &874314583
 MonoBehaviour:
@@ -22285,6 +22285,8 @@ MonoBehaviour:
   rootsGM: {fileID: 1429686234}
   bossHealth: {fileID: 2045783208}
   playerHealth: {fileID: 8225181142081754066}
+  playerHitbox: {fileID: 8225181142081754070}
+  bossHitbox: {fileID: 2045783207}
 --- !u!1 &1434106752
 GameObject:
   m_ObjectHideFlags: 0
@@ -23236,8 +23238,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Player: {fileID: 440545830}
   Base: {fileID: 88721135}
-  Speed: 60
-  MaxRange: 40
+  Speed: 37
+  MaxRange: 15
   CanShoot: 1
 --- !u!114 &1494333310
 MonoBehaviour:
@@ -29478,8 +29480,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Player: {fileID: 440545830}
   Base: {fileID: 1053503696}
-  Speed: 60
-  MaxRange: 40
+  Speed: 37
+  MaxRange: 15
   CanShoot: 1
 --- !u!114 &1909619824
 MonoBehaviour:
@@ -32165,8 +32167,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   owner: {fileID: 2045783212}
-  maxHealth: 250
-  currentHealth: 250
+  maxHealth: 600
+  currentHealth: 600
   OnHealthChange:
     m_PersistentCalls:
       m_Calls: []
@@ -37466,7 +37468,7 @@ MonoBehaviour:
   bulletPrefab: {fileID: 5247659613416637237, guid: 616a11ca5b6b94a4abec2996b0dcae3e,
     type: 3}
   firePoint: {fileID: 8225181141640068463}
-  fireVelocity: 10
+  fireVelocity: 9
 --- !u!4 &8225181142081754059
 Transform:
   m_ObjectHideFlags: 0
@@ -37590,8 +37592,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   owner: {fileID: 8225181142081754062}
-  maxHealth: 350
-  currentHealth: 350
+  maxHealth: 500
+  currentHealth: 500
   OnHealthChange:
     m_PersistentCalls:
       m_Calls: []
