@@ -6,7 +6,7 @@
             {
                 "type": "System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089",
                 "key": "buildOutputDirList",
-                "value": "{\"m_Value\":\"C:/Users/klnev/Documents/Projects/Unity/RootGundam/Builds/buildAndRun;C:/Users/klnev/Documents/Projects/Unity/RootGundam/Builds/02-05-23-RootGundamGz;C:/Users/klnev/Documents/Projects/Unity/RootGundam/Builds/02-05-23PlayTest;C:/Users/klnev/Documents/Projects/Unity/RootGundam/Builds;;;;;;\"}"
+                "value": "{\"m_Value\":\"C:/Users/klnev/Documents/Projects/Unity/RootGundam/Builds/02-13-23-RootGundamWeb;C:/Users/klnev/Documents/Projects/Unity/RootGundam/Builds/buildAndRun;C:/Users/klnev/Documents/Projects/Unity/RootGundam/Builds/02-05-23-RootGundamGz;C:/Users/klnev/Documents/Projects/Unity/RootGundam/Builds/02-05-23PlayTest;C:/Users/klnev/Documents/Projects/Unity/RootGundam/Builds;;;;;\"}"
             }
         ]
     }
